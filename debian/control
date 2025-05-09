@@ -1,0 +1,21 @@
+Source: nolilo
+Section: unknown
+Priority: optional
+Maintainer: Vinche.zsh <vinchethescript@gmail.com>
+Rules-Requires-Root: no
+Build-Depends: debhelper (>= 9),
+Standards-Version: 3.9.8
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/nolilo
+#Vcs-Git: https://salsa.debian.org/debian/nolilo.git
+
+Package: nolilo
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: lilo
+Conflicts: lilo
+Replaces: lilo
+Description: Dummy package for Debianissimo
+ This dummy package ensures that LILO is not installed on the system,
+ so that GRUB can be used instead. If you want to use LILO, you must
+ remove this package.
